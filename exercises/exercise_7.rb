@@ -9,4 +9,6 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
-# Your code goes here ...
+# Validations for both models
+puts "Please enter a new store name:"
+@new_store = gets.chomp
