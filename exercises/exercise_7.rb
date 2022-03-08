@@ -11,4 +11,13 @@ puts "----------"
 
 # Validations for both models
 puts "Please enter a new store name:"
-@new_store = gets.chomp
+
+@new_store_name = gets.chomp
+
+@store = Store.create(name: @new_store_name)
+
+if @store.errors.any?
+  @store.errors.full_messages.each do |message|
+    puts message
+  end
+end
